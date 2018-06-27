@@ -142,7 +142,7 @@ async def connection_handler(ws, uid):
                                       ''.format(other_id))
                         continue
                     wso, oaddr, status = peers[other_id]
-                    if status != room_id:
+                    if status != peer_status:
                         await ws.send('ERROR peer {!r} is not in the room'
                                       ''.format(other_id))
                         continue
